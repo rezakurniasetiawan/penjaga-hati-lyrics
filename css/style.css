@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image: url("../bg.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background: linear-gradient(#2d3436, #003049); */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 3em;
+}
+
+#myAudio {
+  width: 50%;
+  margin-top: 20px;
+}
+
+#lyrics-container {
+  position: relative;
+  width: 80%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#lyrics {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  animation: scroll 30s linear infinite; /* Adjust scrolling speed as needed */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+  #lyrics-container {
+    width: 90%;
+  }
+}
